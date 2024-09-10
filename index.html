@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Comparison Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* style.css */
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 4px;
+    background-color: #f0f4f8;
+    /* background-image: image(C:\Users\reuben\Desktop\hotel project\imagee.png); */
+    color: #333;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #b3d9ff;
+}
+
+#hero {
+    background: linear-gradient(to right, #004080, #007bff);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#featured-hotels {
+    padding: 40px 20px;
+}
+
+#featured-hotels h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #004080;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Add more space between items */
+}
+
+.hotel-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hotel-card img:hover {
+    transform: scale(1.05);
+}
+
+.hotel-card h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+}
+
+.hotel-card .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.hotel-card .btn:hover {
+    background-color: #0056b3;
+}
+
+#testimonials {
+    background: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonial {
+    margin: 20px auto;
+    max-width: 700px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.icon {
+    color: #007bff;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.fa-user:hover {
+    color: #004080;
+}
+
+#gallery {
+    padding: 40px 20px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hotel Comparison Tool</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="compare.html">Compare Hotels</a>
+            <a href="signup.html">signup</a>
+          
+            
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Welcome to the Hotel Comparison Tool</h2>
+            <p>Compare amenities of different hotels in Kenya to find your perfect stay.</p>
+        </section>
+
+        <section id="featured-hotels">
+            <h2>Featured Hotels</h2>
+            <div class="container">
+                <div class="hotel-card">
+                    <img src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hotel 1">
+                    <h3>Villarosa Kempinski</h3>
+                    <p>A luxurious stay with beautiful views and excellent amenities.</p>
+                    <a href="compare.html" class="btn">Details</a>
+                </div>
+                <div class="hotel-card">
+                    <img src="https://images.pexels.com/photos/1638341/pexels-photo-1638341.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hotel 2">
+                    <h3>Ocean View Hotel</h3>
+                    <p>Experience the ultimate comfort by the ocean with top-notch services.</p>
+                    <a href="compare.html" class="btn">Details</a>
+                </div>
+                <div class="hotel-card">
+                    <img src="https://images.pexels.com/photos/27112403/pexels-photo-27112403/free-photo-of-a-canal-with-boats-and-palm-trees-in-the-background.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hotel 3">
+                    <h3>Mountain Retreat</h3>
+                    <p>Escape to nature with stunning mountain views and cozy accommodations.</p>
+                    <a href="compare.html" class="btn">Details</a>
+                </div>
+            </div>
+        </section>
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/hQ0n9gxAAmc?si=ofuuYUogAaMxaQ9V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+        <section id="gallery">
+            <h2>Hotel Gallery</h2>
+            <div class="gallery-container">
+                <img src="https://images.pexels.com/photos/1458457/pexels-photo-1458457.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 1">
+                <img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 2">
+                <img src="https://images.pexels.com/photos/261169/pexels-photo-261169.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 3">
+                <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 4">
+                <img src="https://images.pexels.com/photos/70441/pexels-photo-70441.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 5">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUTExISFRUVFRUVFxgYFxUVFRUVFxUWFxUVFRcYHSggGBolGxcVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0mICUtLS0tLS0vLS0tLS0tLS0tLS0tLS0tLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAJ8BPgMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAECBQYAB//EAEQQAAEDAgMFBAcFBQcEAwAAAAEAAhEDIQQSMQVBUWFxEyKBkQYyQlKhsdEUI5LB4TNicrLwBxVTgqLS8SRzo+IWQ1T/xAAaAQADAQEBAQAAAAAAAAAAAAAAAQIDBAUG/8QAMBEAAgIBAgQFAQgDAQAAAAAAAAECEQMSIQQxQVETImGBoeEUMpGxwdHi8FJicVP/2gAMAwEAAhEDEQA/AOAa1MU6aO7C2QxhzzX1io+ebZ5gRxTCq2nG5NU6SGIhgXqlFHZSCLkCVjow30zKlgK1nYWVLcKEWFCFOmU1RpFNMohGa0KWx0eoNTTUFqI1Qy0Ga5FaUuCiByhooYaUQFLtciNcoaKDgq4KCHq4cs2igwKI0oTSiMKhlIM1EaFRqICsmWi7QiAIYcrhyzZaLgK4Cq0qwIUMouFIVQV7MpGXlQXKhcoNRFCs88qmZSaiqX8lSQi2YqM5Vb8FZrXcEwPZyourmRqFAqSgDwUwrt4zZYuNxrg6zrJwg5ukKT0o2CLKrXBAbtFpYO8M0JJ20QDqB+acccn0E5o4ekbXRmjokKQOidossvaZ56C5ArNYqhiuGFTZRIAUwF7KVOQpWBBVg1RkKqHoALlUwqhyq4pAFAVglmVkw1yGCCtVwhtcrB6koK0IgCBmRGPUspDDWorWpcVEVjlm7KQdoRWILXpim1ZSNEFaiAKGUwjsprBs0SKBquGIgCss3IqgYpq3ZlXzKDVStjpECkeKnsuap2vNTmRuGxIaERjRwVArh6TsEXACnIFTOvCoVNMrYvClULyozlKgA7Tq5WG+qycLjHgQ0AkXKc2phn1IAmEszAFuhIJXVj0KFMxnq1bCOK2m+9olInEBP4/Z9TXUJB2FcCO7C7IaK2MJar3Kt6oDm31ThwLiJCoMI7hJVqSIpnN0xCO2slKtUzr4IbXhdFWZWajayitjMqzX1bWSpqko0oLOgoYwHkpp48b7LBbUMb0ehTJ1S0oepmw/Fk2CBSY6QDvSjcw0Mp2lm0KXIOZo0GDTVGLG8Esx0KxqrJ2abEuwrTpZe7KFQ1lXtCq3J2ClQTCoHq7SgCorKzKhVgFdrUmBGYpikSqAIjZUstDNMpqnVSDXFED1lKNlp0aTcSFXEY4NBus9e7MHVR4UStbHMLtUHWU79tCyBhxuTDGclMscOhUZSHXYtU7ZBFNS5gGqjTFDtjArBScY0LJrF3NDZ2jjYFX4S6i1s36dcHQomZZ+DYWjS6cD+JXPKKT2NEwwBVgxCbVb73xVmvB3yoaZWwQGN6vJQw9TmU0UXgqzWIWbmvZx7yVMC9ShKDUwIdYmyv2vAE+BUGofdj4JrUhOmVpbPY2YQKmzmzMoxfzUZgrTnzslqJ8ifTkyJRaeGK0xg41CuKa9rV2PP0idLBorcExHc0ocO5pbhsWGEaNAqOoAIRe6d6HVqv5ppMGMtAGsJd+LvZBqOcREKKdFPYkZZjHSi0K5mIVKdOFftQ3QJDGwFYJIYxFp1p1U0MbAVghsJOmiKWCLmFLdFJWTIV5S73M3OB8V77RAUaovqVpa6Djbb0QOHFZArPNw1x6AlVAqHUO8inUe6Fb7G22oFcFZlBr94PinWOUNx7lpPsMAqwcgZldtRTqXcrS+wcORGvSpqgakBT9ob7zfMKW0NJjjXKZSQxbffb5j+uCKHk3mymkM9iXO3GFelVgKJUiOSrpQgzcSSvObmVA5WD+aiuxQSnQA3BGptjgEv2qj7QpcWxppDwdzKWx2MDBaST8ELtyUN4nVEYb7g5bbF6e0QBrJO7cmmbTPuNCRbSbwCIAnKEX0EpSDv2m47igu2hGqkNVKlJntQhRgugNyfUu3GzvVxWJQqTaW5M9mwbwEnpXQaTZxNPHEiQ4EeBCqMSd4afgkqlITLZa7iN/8Q0Kmk53tAdRofDcri5ImSi+RpMxDTqQ3rYeeiY+zjf8AoscvA1MBGpYinSGaagBuQG90dQJjqreR9SNCfI020Rz16/NScOkKG3sO8w1xJ/gf9E6MfTbcuEc5jxslGe1xYOLWzRHYclIw44JltamfaA+Cvk4GVayhoExhQo+xt4I5pvnX4IrHN0Nj8E9YtKE/sTeCsMME1jYa2c0HdBH57li1MbWbqWjk4Cfgfoolm08zSOG+RqCkr9kdFjt2tU4U/P8AVXbtqp7jfP8AVR9oiy/AkhuhhKpu1kgWMEjxIzSJR2Mrf4bv/J9UnS2y6R93B45ojxhaGH2+DaozKfe9k9SF5WXC9XkSa91+qR6OPJt5m0/Z/oWwvbsMik+Du+8jdz5JnEY2tLWmgQ43b3qsndbvJyliQRIAIPBxj4JbF1ZrUZbYZrZjfTfuShw82/NBfj9QlmiltL4+hWr9pMn7O6/Op5i/P4JZ32if2DvOpy58guhrY6IzNmRrncPON6WOLB0b/rcs1hnJaowVf9/kU8qi6cn/AH2Mlj6//wCd34qv1UbPxVXNUDaTnEHvDNU7utjfqtdtfg0/icktm1D2lfum7h7REet5q48PKneNem/8iZZ1aqXx9BLEurPdJpPtu+8ib80B7av+E7/yfXp5LoXPPun8RQn1CLwBzN/KUlgyf+a/H+RTzQ/zf4fQ56phKkjNTgExcu84m8LYYQrQDcmTxNypMcl6WDF4cfX0+p5+bI8j9CqkKHJeqHGwPyXQtzB7DOccVZtRZjsC8+1Hh+qLQwr2+1KppdxW+w866qKY4Jd9OoTqAEZ2aIt1SGGYIVglG1surpRm1gUmhoNKnMEJzrWQKlQe0R5pVYNjX2pvEJeswVPaH5oOI7NouAg/3jTaYDR4K1HqiXLowrdnuBtUt0RvsXF5KJTrggXRZScpDUUZh2TRO5w6H6qh2FT3PePwn8ksMZz+Ku3Fn3vBT4cu5vqh2KV/R7Q9qIF4Ld+7esbF4gsMNpvqD3mDu+B3rR23jT2Lr62+p8kjso/c0/4Asnq1abCWmrSENl5WB/dqNzPcYyPdEGIJAN0857Ynvx/26n+1Dwxu7/uP/mK18G+G+fzTjaiqM5bydmPg8dTFs9twLXgjlcaLUbhSW9oHsy8cwHHUG40KLXqylqTiHAtJb0t8klcSq1Hs8ODe2gkEiCYgRN9N41TmFqNA79UOJjU2HS696Q7S7JzXlrXEUaw0B9qjBM9FjHCvd94azgSAYDWZRbcIQsjbqgliUVzOhL2D22x1EKctMjvAHhy6b1zlXZznMJNYm4EFjYOnBawp0WU3GswuytJJaSNBNhx8UPIt1JCjjbpphn7Jpkd0nWZ39J1VBsVgYSaj5AJyw28TABjWIWJUrVu0OVrcsNIBdEAzP08AtTDVHBrjUBaWtkEOJa4x6pAdIvCxk4P0N4+IvUsdlsaZzkEAkCAZh2U6dCna+zWjLNSm4OJEtAb7JN4JB0G5LHHsOuU67nDQwPNW+1UyAA4ak77RTI38ypcaWzLjK3ujX2BQAabM14luoBuLjfqr7Qjt6AAFy72pG7fFkDZWLpjNL2izdT+4z6FVxtema1JzXgi8kGwkjenG0OVNGxVqNAJdl7swM1yBwsgUMZTcSIy9TE9LJLG06D7mrcAgQ4XEE8NZhLValF1yH+BI+AKzxNRgluVkTc9qOhaBJECwB9bjPLkVn4I5X1yQIDhv5u5LNwWw+1GcVajQZgXNszgBM8vimn+ihAntqk+P1S8eK2bDw296Ham1aYMa9DbzhDG1aZPqGxiTCTqejLwCe3qWHE/VBw3o45wB7Z4kA794B434eC0WfD3M3jy+hq1cVRGXutcXEQAbiTEkRZaFfAsAzOgBu9YFX0TMAmrVMdSZnUX6JevsMNGbt3uFrSR7TRGvM+SUcik/LIpwaW6RsVqOHcLVgPKUnh9mUiZGKHQ2Va2yKPvOj+No+YSVfZbR6jn9MzT9F2xqqUn8HJO7txXydPR2VIBDg4cRvQcVQp0/XeG77m8dNVjYRxox3yJ0zEAeHFZuIpGo4n7RmM3iCRymVMcbcqctipZEo7R3Orw1BlT1Hh0c0ntWWABgD3HgQY6rDw2CPvuI3m35WVMWym0w1xPEy36LSOLzczOWTy8qHwMRqaTRzJp25arSo4aoWyQxvjPyXPsDDFz4XJ/JODaBbZrquUcgPKyqcZPkTCUVzNoYK2rfAlArYemLufTtzBSZqMeO82ueYI+NkljsM3MAxtWOJg+UBRGLumy5SVWka3YUnm7qZtvI08V6ps2iCATTBNx3osdFjs2dJNqsAcQJPkhuwzry12vGfkFentIjV3iF2pjG0zlpBrjeSNB0KthNr92HC/MoTtl0nAAyCTr95PjuhArbIptNsx8VqtDVMyamnaEf7sbxd5hUfs0bnPHktJQ5ctmyiuxl1NmggjM6/RNYajkY1gvlAG7cmFRxSpXZXSjNoG7v43/zFa2F9UePzWRQN3fxv/nK1cI8ZQOvzUp+VFV5mEc1VyLxrt0kSNVWriWtgk2JgJMswqmxO9lNVxzAmSBugRr+98Ft9nDOgjyCCaoL2kSYY/5sUjHNc0gAix148DwUwSTdBLdIPR/Z/wCdn8zQibSodtSfTa4CbTExcHRIYbGS3LF8zLTvDm2PDTVNYOvLyYyk2eDq0jQ9NfNTN2yoKkQ3DkOdcWY35vV8W+xG+FBxLC9wD2GWNiHAzepohVjfwU1Zd0K0gZ00N9FNNscf6KNhxDn8HNB/zAgE+UeSnOIb1dP4v1Sul/ewVv8A3uRSqcjuKcp0o4pKid/JvyK16eIaSJaROkxu6FRLJLoaRgupFOlO5Bx1dtJveMZpAmL8YR6OPLQ+W0swnLcwRMAuESDxRti7WOYmu2g4OFWO7AHZuywC5u/WfNc080r3N1jVbBfRz0loNpBoMuaSDJDBcyInXVbj/SWiYgs599nwusbZO0A1tY1aeHNu0GVoMOcJcDA3Et6KMPtEUqZ+7ouEF96e94q1PdAgEEa6Quaa1Nu+ZcdlVGpifSfDNY4uNojukPJmB6rTOpU7C2xQqU2OFRrRAEPLWusI0JWdQx3ZMcDTwzmtzOBgNdlPeGouczjaNAhv2gKWem2nh3AVGiS0T97NQkQIgEuEcAEJbVYM62ttSiBHaNJgmGnMYAk6L51nrdk7MXftGgXn2H2tzyom3cW0YemymGgsOXO0BrnMFJsZoHuvE8TKTwFYmm6dBWYencqLt4d6FfevzObNHV7A6LcZUHdFRwHB3U8eqQx2MxVF4D+0aBrJvcSN/BMNxz2AZXubPAkTGX6nzKytvYpzmS4lxltzJNgQL9F1vJkt9jmWKFepn7Qx1Ss4ucZgReIHnbhogYTFvY4FjspB3W8DxFt6VFQqXOlc+t3Zpp2o7XC7ZxLu60tcYuB2ZjmrHaeJZBLR3iGizDc7rdFxVOpGiK3EmAJPd08broXEuuRj4O/M7TEbdxFMS8MaJ1OXy1ugv9KXgDMaJBuND8A5cjWxbn+s4nhOnkl4A3o+09kHgvq2d9hds1nDMynRcNJAH+9Xw3pC9zyw4dhIE2JZ4ySfJcBTA1k+FkVlT2pMmQb6o+0PsCxV1Pox9KIDv+macglwFRpIETwuj0PSAuaC3DGCJtUZoR0XzBlQmVIrEGQSNN/gksy7F6Zd/hH1EbYdvw7/AMdModTbNFv7Wm6nOk5TP4TK+ZtxTxfM7hqUfDbTF+0YKnDM54jyKf2hdidEjusyyalZ7HkPMgmx3dE1TrRY6fJRiACIImf6kLZmaPMdF0Vz7LLbVNIw67ToeHIrC2hiHdo+HvjMY7zo8LqXOhqJtNGpBg5n/wA7rFM0MQZ4Eahc9sx5z3JNjvK22tkW1EwZHkVMW6LdNjFWnmOdkB1pHvcuqG/FA03b4BJaeI3L1N1QX7oMXg25jmEKtQLpJDZIgw4iRzhPcWxm0dsOBBDdJA73EjlyWtXdPfEB28e9+qUOxoE5RAE+sVbten4nKUu47EsZ2pe4tzgWi/Ic+K1KdV/dOY5g2CdSbaGdQrZ2Bhm7oJs42tI/ooVHFENJDiCQdSCbCbAT8wikCbAYPAdme0BkN6LTOIJym1zGhEDjdZvbHJlE8eF83noOKs3MYvERp0jXVK10HTNNtUAukiBpqDf5qjqzZsCdfWP5Dw3pJtNGoU3OIa0EngAk0WmXDJOaY6RGs6Iv2sCCXfEp3+7W0xNV0u3Mb+ZQKmGY4iRHIEgKY41LdlSyNbIWdjxBAedI9rkmsHtOmBD9AHBvr+06THOCQh/YaUGxsPeOq1PRzY9CoaudpIaLSTaXwNDwWeXDhUW3Y4ZszlSoUG22HNmce8GjR2gi3wSzdoMgSRZobMGSACBPmfNdNhPRrCuzgtMtsO87UC+9Vo+i1GYLDcx6zuDufGFzauGXf4/c2riH/j8/sY7ttU3NeHOPea1tgdA4mPilq+1WPL3FzsxLS0w4ZS1sA89TquooejWGLHE04MGO87UeKW/+OYYz3SO/FnO0DSOPEJqXDf7fH7g1xH+vyc7idpU3wHOJvJ7r/da3hyCbdtWrUp5GElogWpuMeMLUxPolT+6hpGYuJ7ztMkgXPFDo4VtBs05BzNBkkgjfIK7sEsLSrp3S7nLl8VN6q9r7GKcLm1pPni1j2n4CFlba2cTRe4Z2tZlPfY5pMkiBa8SvouCqGo2csdLqW1GNd39DI/5XQlF2ok77Nnw7KUVrF9k2v6GYHEXazsyQO/Sht+bfVPkuI2r6BYimSKRFZugjuP8Awm3kVw+GzVs499ipNJxvBjomMThH0jlqMcx3Bwh3kdyG1xGhI6FGjuUgWXqquMcU9Tqka5T1aD8YW5Qw9KrANelbcWlp+JTWO+pMm49DlqZRqdJxFgTvPRdZW9FATLXsFtMlvms3E+jFdosGuP7rrR/mhDwyRKyRZjMnhqrYmiWnvsc08xCG6i4EyCCOK8+o4ukkzzklZlHjpdQBwVnvzXO7gInmeJ5oTigZ13239xygY3913l+iEMUP8P8A0n6K7a5J/Zn8J+i7r9Tl2PPxQIgscQdxBSRw9L/Dd/qW2Mu4SdLd4zwhslKbXc0Uz+zBaQPVa4iTwmRPMJSGhKjSY0yGO+KOxtMm9M8zLlmUsRH/ANjY4BkJ7B4j1z2hEN1a247zdLjprvUqa/tFODNGphKYB+73HVxEwJte6y8v7p/F9VZtRl4ZchwLnEucZBG6APigNwwScr5DUe5rVK7wYzU2tuI9Z5G4WsPG6ymMdvyfhamBTvO838UQNRVgtipLjabQBAsDaLgarzKIRQF4OT0hZDWq44I2HwbnXPdHEp+kWU/VEu47+vJWoN8jOWSMebKYTZRN6hyt4b/0T7sc2mMlFoH73T5pSvVJbfylSGiRbjv5K1h6yMnxG9RAdqSSSZKvSqGUWhRBlFGG77BxWz0pGEXkbsvUpR4iU1s6r2Yqc2j5gprGYTT+FKvorj8uSB31KE2aWxMROY7y6Vt4uuC0RxXK4ElvFOVdoS09fyXDn4RynceR2YuISgtRr9r3YSOErAkdZ80gNoW3pTD4mCOUKocE0mRPjI2jtMTXHc/zfywuQxVXunqPmna20CcsD2Tw1KxntJ8/zXTwmBxty9Dn4vOnSj6m/serlB/rcULaFYF8EA6fJLUnQvPu6VosWnJrRHjXj0nqFNzHZqbif3eHh9PgtTAbZbmGexnXcs0FWflcIcPEa+PH5rocoz2mvczi3H7pvYrD0MQIqMp1WXsQHR04eC5Laf8AZ7QcCaFR1I3gHvs1594eZTNCm6jJa6xM62/TxWhR2vFnDzUS4dr7rtGsMyf3tmfONqeh+MoCTS7RvvU+/wCbYzDyWAflY8jwX3qhiQcsGf8AhZ21NkYbEOPbUmuPveq/X3hdYPGdCkfH8LjqtP1Kjm7tbeSa/vSr7T3GdbmD4cF0u2vQfKf+nqTPs1P9zfouR2hs3EUL1Kbmj3tWfiFktM47ieiXMIyoy4yhs7wIKtUZTPeJJsbEX89yFgNtVaUhpsdRuK3sH6WtJHaNi0SD+SE0+ZnKLTtfmYb8A1wBaCAedkF+zXD2m+JhdxhtrUXtEPEg6Ex89yZqYWk5xLmMcSBcgH4lV4MXyI8WS2Zx5c4+78Pqj4AHPoz1Xe77p15LJbhSmsLSLTPIjzEKFLctx2HKjgRD64I91glvwhqHlp5HNY2Jy6mSYPCAAgsogbkZrUw5ARQCKxgRA1WDU1ETkyrWq4CmF6CqSESF6VAaTZPUcCBdx8FcU3yIlNR5itKk5xsE6ygxlzd3wVu13CAPH8ghdjOrh8fot440uZxzzykvKWNcuMTA/rRS14AVGUr+t81PZjitVRzS1US6pZMB2iVyhMMbYImVhu9zQ2dTlagw/wB5T8Uns5ui2HD7yn4ry82R6vx/I9zBjWhew3iqPyWTWprZxT1j1XLm4eUqOnNFFKVJZbpzvHA/ktegbrNezv1Dz/JduKTt2cWeCqP/AH9BV9RU7YKmJSxld0VaPIyy0s1cNWzI5WZgHXhabgpkqZcJ6o2Ga5WBQmIoCzZumeKsFEKwCllIu0IVTCg8vl/6+FuSMxXhEckovYppPmZdXtqRkTG7f5cU3h9uDR+sC/W6aa4i2o4HRKYrZjal268N/gfqumOWE9pr3M3DJDfG/ZjXbtcQQ4ItF92gwRmnkVzFWi5rTBkTHCNbK+Bx5YROnmtXw9rysiPGVKpKjc2n6HYLECez7N5nvU4bv3t9U+S4raP9n+JZJoubWaCbeo/yJg+a+gYTGSB/W9OUHkLzpY65noxknyPhdeg+m7K9r2OG5wLT5FGpbTqtsHu8yvsO1KDKrS17GuEixAO4cVgYz+z2g+DTe+nxAhzfAOuPNQ8Vbpl6r2aP/9k=" alt="Gallery Image 5">
+            </div>
+        </section>
+    </main>
+   
+  </div>
+</div>
+<div class="testimonial">
+  <p>"I love how easy it is to see all the amenities side by side. It made my decision-making process so much easier."</p>
+  <cite>- Williams</cite>
+</div>
+</section> 
+
+    <footer>
+        <p>&copy; 2024 Hotel Comparison Tool | BY NDOLO</p>
+    </footer>
+
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

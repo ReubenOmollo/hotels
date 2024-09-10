@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Hotels</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Inline styling for demonstration purposes. Ideally, move these styles to your CSS file */
+        #comparisonResults {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .comparison-table th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .comparison-table td {
+            background-color: #f9f9f9;
+        }
+
+        .comparison-table tr:hover td {
+            background-color: #e0f7fa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Compare Hotels</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="compare.html">Compare Hotels</a>
+        <a href="signup.html"signup</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Select Hotels to Compare</h2>
+        <form id="compareForm">
+            <label for="hotel1">Hotel 1:</label>
+            <input type="text" id="hotel1" placeholder="Enter Hotel Name" required>
+            <label for="hotel2">Hotel 2:</label>
+            <input type="text" id="hotel2" placeholder="Enter Hotel Name" required>
+            <button type="submit">Compare</button>
+        </form>
+        
+        <!-- Placeholder for comparison results -->
+        <div id="comparisonResults">
+            <h3>Comparison Results</h3>
+            <!-- Comparison table will be inserted here by JavaScript -->
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Hotel 1</th>
+                        <th>Hotel 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example row, dynamically filled -->
+                    <tr>
+                        <td>Price</td>
+                        <td>$100</td>
+                        <td>$120</td>
+                    </tr>
+                    <tr>
+                        <td>Rating</td>
+                        <td>4.5</td>
+                        <td>4.2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('compareForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Simple client-side validation
+            const hotel1 = document.getElementById('hotel1').value.trim();
+            const hotel2 = document.getElementById('hotel2').value.trim();
+            if (hotel1 === '' || hotel2 === '') {
+                alert('Please enter both hotel names.');
+                return;
+            }
+
+            // Clear previous results
+            const resultsContainer = document.getElementById('comparisonResults');
+            resultsContainer.innerHTML = '<h3>Comparison Results</h3>';
+
+            // Example data for demonstration
+            const comparisonData = {
+                'Price': ['$100', '$120'],
+                'Rating': ['4.5', '4.2']
+            };
+
+            // Generate comparison table
+            let tableHtml = '<table class="comparison-table"><thead><tr><th>Feature</th><th>' + hotel1 + '</th><th>' + hotel2 + '</th></tr></thead><tbody>';
+            for (let feature in comparisonData) {
+                tableHtml += '<tr><td>' + feature + '</td><td>' + comparisonData[feature][0] + '</td><td>' + comparisonData[feature][1] + '</td></tr>';
+            }
+            tableHtml += '</tbody></table>';
+
+            resultsContainer.innerHTML += tableHtml;
+        });
+    </script>
+</body>
+</html>
